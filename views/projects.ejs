@@ -1,27 +1,38 @@
-<%- include partials/header.ejs %>
+<%- include('partials/header.ejs') %>
 
-  <%- include partials/main_nav.ejs %>
+  <%- include('partials/main_nav.ejs') %>
 
-    <%- include partials/title.ejs %>
+    <%- include('partials/title.ejs') %>
 
       <!--Projects content-->
-      <div class="container">
+      <div style="text-align:center;">
         <h2><br>My Projects</h2>
+
+        <div class="container" style="padding-bottom:100px;">
+          <br><img class="myimg" src="http://localhost:3000/Assets/images/E-Cmp.png" height="200" width="300"
+            alt="E - Company">
+          <h4>E - Company</h4>
+          <p>"E - Company" is a website, which is build to assist manager of the company to
+            maange task of empolyees and keep their task records to make progressive report.</p>
+          <br><img class="myimg" src="http://localhost:3000/Assets/images/Medi doc.png" alt="MediDoc"
+            style="height: 300px;">
+          <h4>MediDoc</h4>
+          <p>"MediDoc" Mobile application based on forming better and more healthier habits for users. Features like
+            step
+            tracker one can track steps taken throughout the day. Users can also avail utilities like various activity
+            trackers, daily reminders along with finding nearby doctors and booking their appointments from within the
+            application
+          </p>
+          <br><img class="myimg" src="http://localhost:3000/Assets/images/Eat.jpeg" alt="Eat ‘N’ Treat"
+            style="height: 300px;">
+          <h4>Eat ‘N’ Treat</h4>
+          <p>“Eat ‘N’ Treat” An application which enables the end user to register online, read and select the
+            food/items
+            from the e-menu card and injunctively orders food online. This system prominently reduces the encumbrance on
+            the canteen's end, as the entire method of taking orders is computerized as well on user's end.</p>
+        </div>
       </div>
 
-      <div class="container" style="padding-bottom:100px;">
-        <br><img class="myimg" src="/Assets/images/slackbotimg.png" alt="Slack Bot">
-        <h4>Serverless Slack bot using AWS Lambda and API Gateway</h4>
-        <p>Built enterprise-level Slack bot using AWS serverless technologies like AWS Lambda and API Gateway</p>
-        <br><img class="myimg" src="/Assets/images/digits.png" alt="Digits">
-        <h4>Handwritten digit recognizer using CNN</h4>
-        <p>Built a handwritten digit recognizer using Convolutional Neural Network over MNIST handwritten digit database
-        </p>
-        <br><img class="myimg" src="/Assets/images/lstmnodeimg.png" alt="LSTM">
-        <h4>Time-series forecasting using LSTM</h4>
-        <p>Built a time-series forecasting - future sales predictor model using LSTM</p>
-      </div>
+      <%- include('partials/bottom_nav.ejs') %>
 
-      <%- include partials/bottom_nav.ejs %>
-
-        <%- include partials/footer.ejs %>
+        <%- include('partials/footer.ejs') %>

@@ -1,6 +1,32 @@
-<!-- Bottom Nav -->
-<footer>
-  <div class="text-center text-white p-3 fixed-bottom" style="background-color: #000;">
-    &copy; Copyright 2021. All rights reserved.
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="footer">
+    <hr>
+    <p> &copy; Copyright <span id="year"></span>. All rights reserved. </p>
   </div>
-</footer>
+
+  <body>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</body>
+
+</html>

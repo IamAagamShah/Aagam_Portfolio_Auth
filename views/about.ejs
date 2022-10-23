@@ -1,33 +1,34 @@
-<%- include partials/header.ejs %>
+<%- include('partials/header.ejs') %>
 
-  <%- include partials/main_nav.ejs %>
+  <%- include('partials/main_nav.ejs') %>
 
-    <%- include partials/title.ejs %>
+    <%- include('partials/title.ejs') %>
 
       <!-- About me content -->
 
       <!-- Added Passport size photo -->
-      <div class="container">
-        <img class="myimg" src="/Assets/images/passport_photo.jpeg" alt="My Picture">
+      <div style="text-align:center;">
+        <img class="myimg" src="http://localhost:3000/Assets/images/passport_photo.jpeg" alt="My Picture">
+        <br>
+        <br>
+
+        <div class="container">
+          <h3>Aagam Shah</h3>
+          <!-- Link to download my resume -->
+          <h5><a href="/Assets\documents\Aagam_Shah_Resume.pdf" download>Here's the link to download my
+              resume</a></h5>
+        </div>
+
+        <!-- Brief paragraph about me -->
+        <div class="container">
+          <p><br>Hello, My name is Aagam Shah. I live in Gujarat, India.<br>
+            <br>I completed my diploma in Computer Engineering from Maharaja Sayajirau University of Baroda.<br>
+            <br>I am currently enrolled in <b>Software Engineering and Technology</b> course at <b>Centennial
+              College</b>.
+          </p>
+        </div>
       </div>
 
-      <div class="container">
-        <h3>Aagam Shah</h3>
-      </div>
+      <%- include('partials/bottom_nav.ejs') %>
 
-      <!-- Brief paragraph about me -->
-      <div class="container">
-        <h5><br>Hello, My name is Aagam Shah. I live in Gujarat, India.<br>
-          <br>I completed my diploma in Computer Engineering from Maharaja Sayajirau University of Baroda.<br>
-          <br>I am currently enrolled in <b>Software Engineering and Technology</b> course at <b>Centennial
-            College</b>.
-        </h5>
-
-        <!-- Link to download my resume -->
-        <h5><a href="./../public/Assets/documents/Aagam_Shah_Resume.pdf" download>Here's the link to download my
-            resume</a></h5>
-      </div>
-
-      <%- include partials/bottom_nav.ejs %>
-
-        <%- include partials/footer.ejs %>
+        <%- include('partials/footer.ejs') %>
