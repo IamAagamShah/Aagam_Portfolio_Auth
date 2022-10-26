@@ -139,11 +139,13 @@ app.get("/logout", function (req, res) {
 //     console.log('Node server is running on port ' + app.get('port'));
 // });
 
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
 server.listen(server_port, server_host, function () {
     console.log('Listening on port %d', server_port);
 });
+
+app.listen(process.env.PORT || 5000)
 
 kaWEWTRAQ671app.get('/delete/:id', function (req, res, next) {
     var id = req.params.id;
