@@ -12,11 +12,11 @@ MongoClient.connect(url, function (err, db) {
         { name: 'Vedant shah', email: 'vedant.shah@gmail.com', password: 'password1234' },
         { name: 'Harsha shah', email: 'harsha.shah@gmail.com', password: 'password1235' },
     ];
-    // var data = dbo.collection("user").find({}).toArray();
-    // if (!data) {
-    dbo.collection("user").insertMany(myobj, function (err, res) {
-        if (err) throw err;
-        console.log("Number of documents inserted: " + res.insertedCount);
-    });
-    //}
+    var data = dbo.collection("user").find({}).toArray();
+    if (!data) {
+        dbo.collection("user").insertMany(myobj, function (err, res) {
+            if (err) throw err;
+            console.log("Number of documents inserted: " + res.insertedCount);
+        });
+    }
 });

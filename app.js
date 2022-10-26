@@ -10,7 +10,6 @@ Contact = require("./models/contact");
 UserData = [];
 contactData = [];
 
-
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://0.0.0.0/node-mongodb";
 var ObjectId = require('mongodb').ObjectId;
@@ -133,9 +132,11 @@ app.get("/logout", function (req, res) {
     res.redirect("/");
 });
 
-var port = process.env.PORT || 3000;
-app.listen(process.env.PORT || 3000, function () {
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.set('port', (process.env.PORT || 3000));
+
+// Start node server
+app.listen(app.get('port'), function () {
+    console.log('Node server is running on port ' + app.get('port'));
 });
 
 app.get('/delete/:id', function (req, res, next) {
