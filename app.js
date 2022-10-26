@@ -59,25 +59,25 @@ app.get("/login", function (req, res) {
     res.render("login", { title: 'login' });
 });
 
-// app.get("/index", function (req, res) {
-//     res.render("index", { title: 'Information' });
-// });
+app.get("/index", function (req, res) {
+    res.render("index", { title: 'Information' });
+});
 
-// app.get("/about", function (req, res) {
-//     res.render("about", { title: 'About Me' });
-// });
+app.get("/about", function (req, res) {
+    res.render("about", { title: 'About Me' });
+});
 
-// app.get("/contact", function (req, res) {
-//     res.render("contact", { title: 'Contact Me' });
-// });
+app.get("/contact", function (req, res) {
+    res.render("contact", { title: 'Contact Me' });
+});
 
-// app.get("/projects", function (req, res) {
-//     res.render("projects", { title: 'Projects' });
-// });
+app.get("/projects", function (req, res) {
+    res.render("projects", { title: 'Projects' });
+});
 
-// app.get("/services", function (req, res) {
-//     res.render("services", { title: 'Services' });
-// });
+app.get("/services", function (req, res) {
+    res.render("services", { title: 'Services' });
+});
 
 app.post("/update", function (req, res) {
     var id = req.body._id;

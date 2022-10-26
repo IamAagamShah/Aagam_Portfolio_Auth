@@ -12,11 +12,11 @@ MongoClient.connect(url, function (err, db) {
     { contactName: 'Synic Software Inc.', email: 'www.synicsw.com', contactNumber: '+1 778-244-8621' },
     { contactName: 'AIVIA Inc.', email: 'www.aivia.ca', contactNumber: '+1 780-481-5444' },
   ];
-  var data = dbo.collection("contact").find({}).toArray();
-  if (!data) {
-    dbo.collection("contact").insertMany(myobj, function (err, res) {
-      if (err) throw err;
-      console.log("Number of documents inserted: " + res.insertedCount);
-    });
-  }
+  // var data = dbo.collection("contact").find({}).toArray();
+  // if (!data) {
+  dbo.collection("contact").insertMany(myobj, function (err, res) {
+    if (err) throw err;
+    console.log("Number of documents inserted: " + res.insertedCount);
+  });
+  //}
 });
