@@ -145,7 +145,7 @@ server.listen(server_port, server_host, function () {
     console.log('Listening on port %d', server_port);
 });
 
-app.listen(process.env.PORT || 5000)
+res.listen(process.env.PORT || 3000)
 
 kaWEWTRAQ671app.get('/delete/:id', function (req, res, next) {
     var id = req.params.id;
